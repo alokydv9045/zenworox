@@ -247,60 +247,76 @@ export function AboutPage() {
                     </motion.div>
                 </div>
 
-                {/* Founder Section */}
+                {/* Leadership Team Section */}
                 <div className="mb-40 relative">
                     <div className="absolute inset-0 bg-[#00F5FF]/5 rounded-[4rem] blur-3xl -z-0"></div>
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="relative"
-                    >
-                        <GlassCard className="p-8 md:p-12 lg:p-20 rounded-3xl md:rounded-[4rem] border border-white/10 overflow-hidden">
-                            <div className="grid lg:grid-cols-2 gap-16 items-center">
-                                <div className="order-1 lg:order-1 space-y-8">
-                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00F5FF]/10 border border-[#00F5FF]/20 text-[#00F5FF] text-xs font-bold uppercase tracking-widest">
-                                        Founder & Visionary
-                                    </div>
-                                    <h2 className="text-4xl md:text-5xl font-bold text-white">Pawan Yadav</h2>
-                                    <div className="relative">
-                                        <Quote className="absolute -top-6 -left-4 md:-left-8 h-8 md:h-12 w-8 md:w-12 text-[#00F5FF]/20" />
-                                        <p className="text-xl md:text-2xl text-gray-300 leading-relaxed italic font-light relative z-10">
-                                            "At ZenworoX, we aren't just building labs; we're building the infrastructure for the next generation of innovators. Our mission is to ensure that no student is left behind in the rapidly evolving technological landscape. We bring the industry directly to the classroom, empowering young minds to dream, design, and deliver."
-                                        </p>
-                                    </div>
-                                    <div className="pt-6 border-t border-white/10 flex items-center gap-4">
-                                        <div className="w-12 h-px bg-gradient-to-r from-[#00F5FF] to-transparent"></div>
-                                        <span className="text-gray-500 font-medium tracking-widest uppercase text-sm">Empowering Future Leaders</span>
-                                    </div>
-                                </div>
-                                <div className="order-2 lg:order-2">
-                                    <div className="relative aspect-square max-w-md mx-auto group">
-                                        {/* Animated background glow */}
-                                        <div className="absolute inset-0 bg-gradient-to-br from-[#00F5FF] to-[#6A5BFF] rounded-[3rem] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-700"></div>
+                    <div className="text-center mb-20 relative z-10">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00F5FF]/10 border border-[#00F5FF]/20 text-[#00F5FF] text-xs font-bold uppercase tracking-widest mb-6">
+                            The Leadership Team
+                        </div>
+                        <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
+                            Visionaries Behind <span className="bg-gradient-to-r from-[#00F5FF] to-[#6A5BFF] bg-clip-text text-transparent">ZenworoX</span>
+                        </h2>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 relative z-10 max-w-4xl mx-auto">
+                        {[
+                            {
+                                name: "Pawan Yadav",
+                                role: "Founder & Visionary",
+                                image: "/Pawan yadav.png",
+                                quote: "We aren't just building labs; we're building the infrastructure for the next generation of innovators.",
+                                gradient: "from-[#00F5FF] to-[#6A5BFF]"
+                            },
+                            {
+                                name: "Ajay Joshi",
+                                role: "Co-founder",
+                                image: "/ajay joshi.png",
+                                quote: "Our mission is to bridge the gap between education and industry through immersive tech exposure.",
+                                gradient: "from-[#6A5BFF] to-[#00F5FF]"
+                            }
+                        ].map((member, i) => (
+                            <motion.div
+                                key={member.name}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1, duration: 0.8 }}
+                            >
+                                <GlassCard className="p-0 h-full rounded-[2.5rem] border-white/10 overflow-hidden group hover:border-[#00F5FF]/30 transition-all duration-500">
+                                    <div className="aspect-[4/5] relative overflow-hidden">
+                                        <img 
+                                            src={member.image} 
+                                            alt={member.name} 
+                                            className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                            onError={(e) => {
+                                                const target = e.target as HTMLImageElement;
+                                                target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop";
+                                            }}
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                                         
-                                        {/* Image Container */}
-                                        <div className="relative h-full w-full rounded-2xl md:rounded-[3rem] border border-white/10 overflow-hidden bg-white/5 backdrop-blur-sm p-2">
-                                            <div className="h-full w-full rounded-xl md:rounded-[2.5rem] overflow-hidden">
-                                                <img 
-                                                    src="/Pawan yadav.png" 
-                                                    alt="Pawan Yadav - Founder of ZenworoX" 
-                                                    className="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-700 scale-110 hover:scale-100"
-                                                />
-                                            </div>
-                                            {/* Decorative Corner */}
-                                            <div className="absolute top-0 right-0 p-8">
-                                                <div className="w-12 h-12 border-t-2 border-r-2 border-[#00F5FF] rounded-tr-3xl"></div>
-                                            </div>
-                                            <div className="absolute bottom-0 left-0 p-8">
-                                                <div className="w-12 h-12 border-b-2 border-l-2 border-[#6A5BFF] rounded-bl-3xl"></div>
-                                            </div>
+                                        {/* User provided snippet applied to each card */}
+                                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-transparent opacity-50 pointer-events-none"></div>
+                                        
+                                        <div className="absolute bottom-6 left-6 right-6">
+                                            <div className="text-2xl font-bold text-white mb-1">{member.name}</div>
+                                            <div className="text-[#00F5FF] text-sm font-bold uppercase tracking-widest">{member.role}</div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </GlassCard>
-                    </motion.div>
+                                    <div className="p-8 space-y-4">
+                                        <div className="relative">
+                                            <Quote className="absolute -top-2 -left-2 h-6 w-6 text-[#00F5FF]/20" />
+                                            <p className="text-gray-400 leading-relaxed italic font-light pl-6">
+                                                {member.quote}
+                                            </p>
+                                        </div>
+                                        <div className="w-12 h-0.5 bg-gradient-to-r from-[#00F5FF] to-transparent opacity-30"></div>
+                                    </div>
+                                </GlassCard>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Values section */}

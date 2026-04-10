@@ -1,34 +1,10 @@
-import { motion, useInView } from "motion/react";
-import { useRef, useState, useEffect } from "react";
+import { motion } from "motion/react";
+import { useEffect } from "react";
 import { Rocket, ShieldCheck, Trophy, GraduationCap } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Link } from "react-router";
 
-function CountUp({ end, duration = 2 }: { end: number; duration?: number }) {
-    const [count, setCount] = useState(0);
-    const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { once: true });
 
-    useEffect(() => {
-        if (!isInView) return;
-        let startTime: number;
-        let animationFrame: number;
-        const animate = (timestamp: number) => {
-            if (!startTime) startTime = timestamp;
-            const progress = (timestamp - startTime) / (duration * 1000);
-            if (progress < 1) {
-                setCount(Math.floor(end * progress));
-                animationFrame = requestAnimationFrame(animate);
-            } else {
-                setCount(end);
-            }
-        };
-        animationFrame = requestAnimationFrame(animate);
-        return () => cancelAnimationFrame(animationFrame);
-    }, [isInView, end, duration]);
-
-    return <span ref={ref}>{count}</span>;
-}
 
 export function ImpactPage() {
     useEffect(() => {
@@ -73,34 +49,7 @@ export function ImpactPage() {
                 </div>
             </section>
 
-            {/* Section 2: Balanced Metrics */}
-            <section className="py-24 border-y border-white/5 bg-white/[0.02] backdrop-blur-2xl">
-                <div className="container mx-auto px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-                        {[
-                            { label: "Partner Schools", value: 20, suffix: "+", desc: "Empowering educational institutions across India" },
-                            { label: "Active Students", value: 10000, suffix: "+", desc: "Daily learners engaged in hands-on tech education" },
-                            { label: "Tech Projects", value: 50, suffix: "+", desc: "Innovative solutions built by our young innovators" }
-                        ].map((stat, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: i * 0.1 }}
-                                className="flex flex-col items-start text-left space-y-4"
-                            >
-                                <div className="text-6xl md:text-7xl font-bold text-white tracking-tighter leading-none">
-                                    <CountUp end={stat.value} />{stat.suffix}
-                                </div>
-                                <div className="space-y-1">
-                                    <div className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#00F5FF]">{stat.label}</div>
-                                    <p className="text-sm text-gray-500 max-w-[220px] leading-relaxed">{stat.desc}</p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+
 
             {/* Section 3: The Pillars (Tighter Cards) */}
             <section className="py-40 px-6">

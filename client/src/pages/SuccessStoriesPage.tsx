@@ -35,12 +35,7 @@ export function SuccessStoriesPage() {
         }
     ];
 
-    const stats = [
-        { label: "Partner Schools", value: "20+", icon: School },
-        { label: "Students Trained", value: "10,000+", icon: GraduationCap },
-        { label: "Tech Projects", value: "50+", icon: Star },
-        { label: "Success Rate", value: "98%", icon: Star }
-    ];
+
 
     return (
         <div className="min-h-screen pt-32 pb-20">
@@ -62,29 +57,7 @@ export function SuccessStoriesPage() {
                     </p>
                 </motion.div>
 
-                {/* Stats Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24">
-                    {stats.map((stat, i) => {
-                        const Icon = stat.icon;
-                        return (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                            >
-                                <GlassCard className="text-center group hover:border-[#00F5FF]/50 transition-colors">
-                                    <div className="w-12 h-12 rounded-xl bg-[#00F5FF]/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                                        <Icon className="h-6 w-6 text-[#00F5FF]" />
-                                    </div>
-                                    <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                                    <div className="text-sm text-gray-400 uppercase tracking-widest">{stat.label}</div>
-                                </GlassCard>
-                            </motion.div>
-                        );
-                    })}
-                </div>
+
 
                 {/* Stories */}
                 <div className="space-y-24">

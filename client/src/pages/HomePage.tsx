@@ -2,9 +2,9 @@ import { HeroSection } from "../sections/home/HeroSection";
 import { VideoStrip } from "../sections/home/VideoStrip";
 import { WhatWeOffer } from "../sections/home/WhatWeOffer";
 import { ZeroInvestment } from "../sections/home/ZeroInvestment";
-import { StatsSection } from "../sections/home/StatsSection";
+
 import { ProcessFlow } from "../sections/home/ProcessFlow";
-import { Testimonials } from "../sections/home/Testimonials";
+
 import { CTABlock } from "../sections/home/CTABlock";
 import { FAQSection } from "../sections/home/FAQSection";
 import { DemoBookingSection } from "../sections/home/DemoBookingSection";
@@ -22,7 +22,7 @@ export function HomePage() {
   return (
     <div className="relative">
       <HeroSection />
-      <StatsSection />
+
       <GapSection />
       <WhatWeOffer />
       <TurnkeyLabSection />
@@ -30,7 +30,7 @@ export function HomePage() {
       <ProcessFlow />
       <ZeroInvestment />
       <VideoStrip />
-      <Testimonials />
+
       <DemoBookingSection />
       <FAQSection />
       <CTABlock />
