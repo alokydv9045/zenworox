@@ -1,8 +1,5 @@
-import { motion, useInView } from "motion/react";
-import { CheckCircle2, ArrowRight } from "lucide-react";
-import { useRef, useState, useEffect } from "react";
-import { Link } from "react-router";
-
+import { motion } from "motion/react";
+import { CheckCircle2 } from "lucide-react";
 const steps = [
   {
     number: "01",
@@ -24,35 +21,7 @@ const steps = [
   }
 ];
 
-function CountUp({ end, duration = 2 }: { end: number; duration?: number }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true });
 
-  useEffect(() => {
-    if (!isInView) return;
-
-    let startTime: number;
-    let animationFrame: number;
-
-    const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = (timestamp - startTime) / (duration * 1000);
-
-      if (progress < 1) {
-        setCount(Math.floor(end * progress));
-        animationFrame = requestAnimationFrame(animate);
-      } else {
-        setCount(end);
-      }
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationFrame);
-  }, [isInView, end, duration]);
-
-  return <div ref={ref}>{count}</div>;
-}
 
 export function ZeroInvestment() {
   return (
@@ -130,31 +99,6 @@ export function ZeroInvestment() {
           </div>
         </div>
 
-        {/* Stats callout */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-          className="mt-20 text-center"
-        >
-          <div className="inline-block backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-12 max-w-2xl">
-            <div className="text-7xl md:text-8xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-[#00F5FF] to-[#6A5BFF] bg-clip-text text-transparent">
-                ₹<CountUp end={0} />
-              </span>
-            </div>
-            <div className="text-2xl text-white mb-2">Capital Expense</div>
-            <p className="text-gray-400">Transform your school into a tech hub with zero upfront investment</p>
-            <Link
-              to="/free-lab-setup"
-              className="mt-8 flex items-center justify-center gap-2 text-[#00F5FF] hover:gap-3 transition-all group pointer-events-auto"
-            >
-              <span>Learn more about our model</span>
-              <ArrowRight className="h-5 w-5 animate-pulse group-hover:animate-none" />
-            </Link>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

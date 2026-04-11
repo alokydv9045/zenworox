@@ -43,8 +43,8 @@ export function CTABlock() {
           </h2>
 
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Join 20+ forward-thinking schools preparing students for the future.
-            Setup takes just 2 weeks with zero investment.
+            Join forward-thinking schools preparing students for the future.
+            Setup takes just 2 weeks with minimal hassle.
           </p>
 
           {/* CTA Buttons */}
@@ -76,15 +76,11 @@ export function CTABlock() {
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-gray-400">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-[#00F5FF] rounded-full"></div>
-              <span>20+ Schools Partnered</span>
+              <span>98% Satisfaction Rate</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-[#6A5BFF] rounded-full"></div>
-              <span>10,000+ Students Trained</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-[#00F5FF] rounded-full"></div>
-              <span>98% Satisfaction Rate</span>
+              <span>Industry-Certified Mentors</span>
             </div>
           </div>
         </motion.div>

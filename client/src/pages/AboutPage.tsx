@@ -358,7 +358,7 @@ export function AboutPage() {
                             {[
                                 { year: "The Genesis", title: "Identifying the Gap", desc: "Our founders noticed a massive disconnect between traditional schooling and the rapidly evolving tech industry." },
                                 { year: "Model Creation", title: "The Zero-Investment Lab", desc: "Developed our unique turnkey model to remove financial barriers for premium tech education." },
-                                { year: "Expansion", title: "Nationwide Presence", desc: "Partnering with 20+ top-tier schools and training over 10,000 students daily." },
+                                { year: "Expansion", title: "Nationwide Presence", desc: "Partnering with top-tier schools and training thousands of students daily." },
                                 { year: "Present Day", title: "21st-Century Leaders", desc: "Graduating students who are proficient in AI, Robotics, and Animation with real-world project portfolios." }
                             ].map((m, i) => (
                                 <motion.div
@@ -396,9 +396,9 @@ export function AboutPage() {
                         </p>
                         <div className="flex justify-center flex-wrap gap-10">
                             {[
-                                { title: "20+ Schools", desc: "Partner Institutions" },
-                                { title: "10K+ Students", desc: "Innovators Trained" },
-                                { title: "50+ Projects", desc: "Industrial Level" }
+                                { title: "National", desc: "Presence" },
+                                { title: "ISO", desc: "Certified" },
+                                { title: "24/7", desc: "Support" }
                             ].map((stat, i) => (
                                 <div key={i} className="text-center group">
                                     <div className="text-4xl font-bold text-white mb-2 group-hover:text-[#00F5FF] transition-colors">{stat.title}</div>

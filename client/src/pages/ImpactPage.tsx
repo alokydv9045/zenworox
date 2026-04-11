@@ -79,7 +79,7 @@ export function ImpactPage() {
                             },
                             { 
                                 title: "Nationwide Network", 
-                                desc: "A connected ecosystem of 20+ forward-thinking schools sharing resources and innovation highlights.", 
+                                desc: "A connected ecosystem of forward-thinking schools sharing resources and innovation highlights.", 
                                 icon: Trophy
                             }
                         ].map((pillar, i) => (

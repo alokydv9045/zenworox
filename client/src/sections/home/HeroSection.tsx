@@ -137,28 +137,6 @@ export function HeroSection() {
               </Button>
             </motion.div>
 
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="flex items-center gap-8 pt-8"
-            >
-              <div>
-                <div className="text-3xl font-bold bg-gradient-to-r from-[#00F5FF] to-[#6A5BFF] bg-clip-text text-transparent">20+</div>
-                <div className="text-sm text-gray-400">Schools</div>
-              </div>
-              <div className="w-px h-12 bg-gradient-to-b from-transparent via-[#00F5FF] to-transparent"></div>
-              <div>
-                <div className="text-3xl font-bold bg-gradient-to-r from-[#00F5FF] to-[#6A5BFF] bg-clip-text text-transparent">10K+</div>
-                <div className="text-sm text-gray-400">Students</div>
-              </div>
-              <div className="w-px h-12 bg-gradient-to-b from-transparent via-[#00F5FF] to-transparent"></div>
-              <div>
-                <div className="text-3xl font-bold bg-gradient-to-r from-[#00F5FF] to-[#6A5BFF] bg-clip-text text-transparent">₹0</div>
-                <div className="text-sm text-gray-400">Investment</div>
-              </div>
-            </motion.div>
 
             {/* Trust Badges */}
             <motion.div

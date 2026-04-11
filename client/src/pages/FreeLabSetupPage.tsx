@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { CheckCircle2, X, Wifi, Zap, Users, MapPin } from "lucide-react";
+import { CheckCircle2, X, Wifi, Zap, Rocket, MapPin } from "lucide-react";
 import { GlassCard } from "../components/GlassCard";
 import { Button } from "../components/ui/button";
 
@@ -129,7 +129,7 @@ export function FreeLabSetupPage() {
               </h3>
               <div className="space-y-4">
                 {[
-                  "₹0 Initial Investment",
+                  "No Initial Investment",
                   "Always Latest Equipment",
                   "Expert Trainers Included",
                   "Full Maintenance Support",
@@ -196,7 +196,7 @@ export function FreeLabSetupPage() {
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   {[
-                    "Minimum 200+ Students",
+                    "Scalable Student Base",
                     "Management Commitment",
                     "Long-term Partnership",
                     "Dedicated Staff Support",
@@ -210,13 +210,13 @@ export function FreeLabSetupPage() {
                   ))}
                 </div>
               </div>
-              <div className="bg-[#000000]/40 p-8 rounded-3xl border border-white/10">
+              <div className="bg-[#000000]/40 p-8 rounded-3xl border border-white/10 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#6A5BFF] to-[#0099CC] flex items-center justify-center mx-auto mb-6">
-                    <Users className="h-10 w-10 text-white" />
+                    <Rocket className="h-10 w-10 text-white" />
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-2">20+ Schools</h4>
-                  <p className="text-gray-500 mb-6">Join our growing ecosystem of forward-thinking schools</p>
+                  <h4 className="text-xl font-bold text-white mb-2">Ready to Start?</h4>
+                  <p className="text-gray-500 mb-6">Begin your school's transformation today</p>
                   <Button className="w-full bg-[#6A5BFF] hover:opacity-90 transition-opacity">Request Site Survey</Button>
                 </div>
               </div>
