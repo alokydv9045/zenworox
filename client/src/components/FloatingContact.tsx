@@ -3,8 +3,8 @@ import { MessageCircle, Phone, ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export function FloatingContact() {
-  const whatsappNumber = "9045330310"; // Updated per previous context
-  const phoneNumber = "9045330310"; // Updated per previous context
+  const whatsappNumber = "8755744075"; // Updated per previous context
+  const phoneNumber = "7817045062"; // Updated per previous context
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {

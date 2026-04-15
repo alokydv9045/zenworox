@@ -92,7 +92,7 @@ export function Footer() {
                 <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-[#00F5FF]/10 transition-colors">
                   <Phone className="h-4 w-4 text-[#00F5FF]" strokeWidth={1.5} />
                 </div>
-                <span className="text-sm text-gray-400 font-bold group-hover:text-white transition-colors tracking-wide">+91 90453 30310</span>
+                <span className="text-sm text-gray-400 font-bold group-hover:text-white transition-colors tracking-wide">+91 78170 45062</span>
               </li>
               <li className="flex items-start gap-4 group">
                 <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-[#00F5FF]/10 transition-colors">

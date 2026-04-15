@@ -116,7 +116,7 @@ export function DemoBookingSection() {
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm text-gray-400 ml-1">Phone Number</label>
-                    <Input name="user_phone" placeholder="+91 90453 30310" type="tel" className="bg-white/5 border-white/10" required />
+                    <Input name="user_phone" placeholder="+91 78170 45062" type="tel" className="bg-white/5 border-white/10" required />
                   </div>
                 </div>
 

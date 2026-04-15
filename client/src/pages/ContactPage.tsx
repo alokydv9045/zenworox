@@ -205,8 +205,8 @@ export function ContactPage() {
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
                   <p className="text-gray-400 mb-2">Mon-Sat, 9AM-6PM IST</p>
-                  <a href="tel:+919045330310" className="text-[#00F5FF] hover:text-[#6A5BFF] transition-colors">
-                    +91 90453 30310
+                  <a href="tel:+917817045062" className="text-[#00F5FF] hover:text-[#6A5BFF] transition-colors">
+                    +91 78170 45062
                   </a>
                 </div>
               </div>
